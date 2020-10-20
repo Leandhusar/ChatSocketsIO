@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+        <title>Chat</title>
+    </head>
+
+    <body class="bg-black flex justify-center mb-32">
+        <div class="text-white container mt-10" id="chat"></div>
+        <form class="flex flex-col md:flex-row w-full h-64 md:h-24 bottom-0 container fixed">
+            <input class="bg-transparent text-white w-full md:w-40 h-24 pl-2" type="text" name="name" placeholder="Nombre"
+            required />
+            <input class="bg-transparent text-white w-full md:w-screen h-full md:h-24 pb-32 md:pb-0 pl-2" type="text"
+            name="message" placeholder="Escriba su mensaje" />
+            <button class="bg-red-900 text-white p-3 rounded h-16" type="submit" name="send">Enviar</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2.2.0/dist/socket.io.js"></script>
+        <script src="./chat.js"></script>
+    </body>
+</html>
